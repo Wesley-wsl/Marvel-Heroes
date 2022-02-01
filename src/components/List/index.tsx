@@ -13,7 +13,7 @@ export default function List({ category, dataCategory }: IList) {
             </View>
             <FlatList
                 data={dataCategory}
-                renderItem={Character}
+                renderItem={props => <Character {...props} />}
                 keyExtractor={item => item.name}
                 horizontal
                 showsHorizontalScrollIndicator={false}
