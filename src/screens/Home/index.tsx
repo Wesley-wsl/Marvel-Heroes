@@ -1,12 +1,11 @@
-// import { useEffect } from 'react';
 import { useEffect, useState } from 'react';
 import { Text, ScrollView } from 'react-native';
 
 import { ICharacters } from '../../@types';
-import data from '../../assets/application.json';
 import Categories from '../../components/Categories';
 import Header from '../../components/Header';
 import List from '../../components/List';
+import data from '../../utils/application.json';
 import { styles } from './styles';
 
 export default function Home() {
