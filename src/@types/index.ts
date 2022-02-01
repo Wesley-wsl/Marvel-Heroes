@@ -1,3 +1,5 @@
+import { StackNavigationProp } from '@react-navigation/stack';
+
 export interface ICharacters {
     name: string;
     alterEgo: string;
@@ -11,7 +13,6 @@ export interface ICharacters {
 export interface IDataCategory {
     item: ICharacters;
 }
-
 interface IAbilities {
     force: number;
     intelligence: number;
@@ -33,7 +34,30 @@ interface ICaracteristics {
     universe: string;
 }
 
+export interface ICharacterParams {
+    data: ICharacters;
+}
+
 export interface IList {
     category: string;
     dataCategory: ICharacters[];
+}
+
+export type RootStackParamList = {
+    Home: undefined;
+    Character: { data: ICharacters };
+};
+
+export type homeScreenProps = StackNavigationProp<RootStackParamList, 'Home'>;
+export type characterScreenProps = StackNavigationProp<
+    RootStackParamList,
+    'Character'
+>;
+
+export interface ISkill {
+    Ability: string;
+}
+
+export interface IMovie {
+    item: string;
 }
