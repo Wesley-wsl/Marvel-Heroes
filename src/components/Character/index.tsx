@@ -1,14 +1,19 @@
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
+import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 
-import { IDataCategory } from '../../@types';
+import { characterScreenProps, IDataCategory } from '../../@types';
 import { styles } from './styles';
 
 export default function Character({ item }: IDataCategory) {
+    const navigation = useNavigation<characterScreenProps>();
+
     return (
-        <TouchableOpacity style={styles.container} activeOpacity={0.8}>
+        <TouchableOpacity
+            style={styles.container}
+            activeOpacity={0.8}
+            onPress={() => navigation.navigate(`Character`, { data: item })}
+        >
             <Image source={{ uri: item.imagePath }} style={styles.image} />
 
             <LinearGradient
