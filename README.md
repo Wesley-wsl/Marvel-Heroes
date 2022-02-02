@@ -14,6 +14,13 @@
 
 This project was made based on a <a href="https://www.devchallenge.com.br/challenges/5edabfda693fca2236c83cc7/details">devChallenge</a>. The idea is to create an application with React Native that is able to list Marvel characters with their information, skill points and movies. 
 
+## 📗 User Stories:
+
+ - [x] - Your application must contain a screen where it will list the characters defined by heroes, antiheroes, aliens and humans
+ - [x] - User will be able to view more characters by dragging their finger to the side (like a carousel)
+ - [x] - Clicking on a character will display information about that character's quality life, abilities and movies
+ - [x] - Your app should look as close as possible to the template that is available in the "design" folder 
+
 ### 🛠 Technologies
 
 <li><a href="https://reactnative.dev">React Native</a></li>
