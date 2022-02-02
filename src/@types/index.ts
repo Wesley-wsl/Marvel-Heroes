@@ -56,6 +56,7 @@ export type characterScreenProps = StackNavigationProp<
 
 export interface ISkill {
     Ability: string;
+    Dots: number;
 }
 
 export interface IMovie {
